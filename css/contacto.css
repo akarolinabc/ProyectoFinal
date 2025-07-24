@@ -1,0 +1,351 @@
+/* General para todo el sitio */
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fdfdfd;
+  color: #222;
+  font-family: Raleway;
+  line-height: 1.6;
+}
+
+/* Estilos generales fuentes, bk, color*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Para títulos, navegación y botones */
+h1,
+h2,
+h3,
+nav a,
+.cta-button,
+.vibrante {
+  font-family: 'Quicksand', sans-serif;
+}
+
+/*------ Menu hamburguesa inicio-------*/
+
+/* Estilos generales del menú */
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo */
+.logo img {
+  height: 60px;
+}
+
+.main-nav .logo {
+  flex: 1;
+}
+
+/* Menú principal (visible solo en escritorio) */
+.nav-primary {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-left: auto;
+}
+
+/* underline animado */
+.nav-primary li a {
+  position: relative;
+  color: #333;
+  font-weight: 600;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.nav-primary li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 0%;
+  height: 2px;
+  background-color: #FF7A00;
+  transition: width 0.3s ease;
+}
+
+.nav-primary li a:hover::after {
+  width: 100%;
+}
+
+/* Botón del cierre del menu hamburguesa */
+.nav-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+  margin-left: 1.75rem;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+/* Horientación del botón */
+.nav-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* Menu secundario lateral (nav-secondary) */
+.nav-secondary {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 250px;
+  background-color: #fffaf0;
+  list-style: none;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 100;
+}
+
+.nav-secondary.active {
+  right: 0;
+}
+
+/* Contenido del menu secundario */
+
+.nav-secondary a {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* underline al hacer hover */
+.nav-secondary a::after {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ff6600;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-secondary a:hover::after {
+  width: 100%;
+}
+
+/* Ocultar enlaces duplicados en escritorio */
+.mobile-only {
+  display: none;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .nav-primary {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+}
+
+/*------ Formulario de contactos-------*/
+
+.contacto {
+  /* texto*/
+  background-color: #fffdf8;
+  padding: 8rem 1rem;
+  text-align: center;
+}
+
+/* estilos generales del formulario, fuente, color, ...*/
+.contacto h2 {
+  font-size: 2.2rem;
+  color: #b34a00;
+  padding: 1rem;
+}
+
+.contacto p {
+  max-width: 700px;
+  margin: 0 auto 2.5rem auto;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* campos del formulario*/
+.formulario-contacto {
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* estilos de label*/
+.campo label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #b34a00;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+/* estilos de input y textarea*/
+.campo input,
+.campo textarea {
+  padding: 0.6rem;
+  border: 1px solid #d5cfc7;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* estilos placeholder*/
+input::placeholder,
+textarea::placeholder {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+  font-style: italic;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* boton enviar*/
+button[type="submit"] {
+  background-color: #b34a00;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+  width: fit-content;
+  align-self: center;
+}
+
+button[type="submit"]:hover {
+  background-color: #923a00;
+}
+
+/* ----Responsive: en móviles---- */
+@media (max-width: 480px) {
+  .formulario-contacto {
+    padding: 0 0.5rem;
+  }
+
+  .campo input,
+  .campo textarea {
+    font-size: 0.95rem;
+    padding: 0.7rem;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    padding: 0.9rem;
+  }
+}
+
+/* ------Inicio Footer------ */
+
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+/* --estructura del footer-- */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* --estilos generales-- */
+.footer-container p {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-top: 0.5rem;
+}
+
+/* --texto small sobre los iconos-- */
+.footer-container small {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #ccc;
+  background-color: #222;
+}
+
+/* iconos redes sociales */
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* img de los iconos */
+.social-links a img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+  filter: brightness(0) invert(1);
+}
+
+/* efecto animacion en los iconos */
+.social-links a:hover img {
+  transform: scale(1.2);
+  filter: brightness(0.9) invert(1) sepia(1) hue-rotate(15deg);
+}
+
+/* ¿Fin?... */

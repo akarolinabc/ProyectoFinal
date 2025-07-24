@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Define los caracteres en la página -->
+  <meta charset="utf-8">
+
+  <!-- Garantizar la compatibilidad con versiones antiguas de Internet Explorer -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Título que aparece en la pestaña del navegador y que ayuda al SEO -->
+  <title>App Oficial - Fest Bossa & Jazz</title>
+
+  <!-- Icono de la pestaña -->
+  <link rel="icon" type="image/png" href="img/logo/logofbj.png">
+
+  <!-- Adaptada a dispositivos móviles (responsive) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Descripción de la página para los motores de búsqueda-->
+  <meta name="description"
+    content="Descubre la historia del Fest Bossa & Jazz, el festival que une música, cultura y naturaleza en Brasil.">
+
+  <!-- Carga de las fuentes: conecta con Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- Recursos de fonts.gstatic.com se usen cruzando dominios -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fuente utilizada -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Quicksand:wght@500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Enlaza el archivo CSS de esta sección -->
+  <link rel='stylesheet' type='text/css' media='screen' href='css/app.css'>
+
+  <!-- Enlaza el JavaScript correspondiente, usando "defer" para que se cargue al final -->
+  <script src='js/main.js' defer></script> <!-- utilizo main pues no tengo js en esta seccion-->
+</head>
+
+<!-- Inicio del menu hamburguesa y logo-->
+
+<body>
+  <header>
+    <nav class="main-nav">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html" title="Ir al inicio del sitio Web">
+          <img src="img/logo/logofbj.png" alt="logoFBJ" height="58">
+        </a>
+      </div>
+
+      <!-- Menú visible en escritorio -->
+      <ul class="nav-primary">
+        <li><a href="index.html" class="active" title="Ir al inicio del sitio web">Inicio</a></li>
+        <li><a href="pipa.html" title="Ver información de la edición Pipa 2025">Edición Pipa</a></li>
+        <li><a href="sobre.html" title="Leer sobre la historia del festival">El Festival</a></li>
+      </ul>
+
+      <!-- Botón del menu -->
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Menú hamburguesa (todos los enlaces en orden para móvil) -->
+      <ul class="nav-secondary" id="navMenu">
+        <!-- Enlaces solo para móvil -->
+        <li class="mobile-only"><a href="index.html">Inicio</a></li>
+        <li class="mobile-only"><a href="pipa.html">Edición Pipa</a></li>
+        <li class="mobile-only"><a href="sobre.html">El Festival</a></li>
+
+        <!-- Enlaces visibles siempre -->
+        <li><a href="app.html">App Oficial</a></li>
+        <li><a href="colaboradores.html">Colaboradores</a></li>
+        <li><a href="mapa.html">Cómo Llegar</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--Mockup presentacion de la app-->
+  <main>
+    <section class="app-festival" title="Aplicación oficial del festival">
+      <div class="container">
+        <h2>Descubre la app oficial del Fest Bossa & Jazz</h2>
+        <p class="intro">
+          Diseñada para acompañarte en cada momento, la app del festival te ofrece acceso rápido a los artistas,
+          escenarios y colaboradores aliados. Vive la experiencia completa desde la palma de tu mano.
+        </p>
+
+        <!-- Sección 1: Artistas -->
+        <div class="app-section">
+          <div class="texto-app">
+            <h3>Artistas destacados</h3>
+            <p>
+              Explora todos los músicos confirmados de esta edición, accede a sus biografías y descubre cuándo y dónde
+              se
+              presentarán. Toda la programación artística en tu bolsillo.
+            </p>
+          </div>
+          <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+          <div class="imagen-app">
+            <picture>
+              <source srcset="img/mockup/artistas.webp" type="image/webp">
+              <source srcset="img/artistas/.jpg" type="image/jpg">
+              <img src="img/mockup/artistas.jpg" alt="Vista de artistas destacados en la app" loading="lazy">
+            </picture>
+          </div>
+        </div>
+
+        <!-- Sección 2: Escenarios -->
+        <div class="app-section invertida">
+          <div class="texto-app">
+            <h3>Escenarios por categoría</h3>
+            <p>
+              Consulta la programación por escenario y tipo: diurno, nocturno o jam session. Organiza tu experiencia
+              según
+              el estilo musical o el ambiente que prefieras.
+            </p>
+          </div>
+          <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+          <div class="imagen-app">
+            <picture>
+              <source srcset="img/mockup/escenarios.webp" type="image/webp">
+              <source srcset="img/escenarios/.jpg" type="image/jpg">
+              <img src="img/mockup/escenarios.jpg" alt="Vista de escenarios en la app" loading="lazy">
+            </picture>
+          </div>
+        </div>
+
+        <!-- Sección 3: Colaboradores -->
+        <div class="app-section">
+          <div class="texto-app">
+            <h3>Colaboradores y servicios</h3>
+            <p>
+              Encuentra alojamientos recomendados, bares, restaurantes y servicios aliados del festival. Con la app,
+              descubrir dónde comer y dormir nunca fue tan fácil.
+            </p>
+          </div>
+          <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy -->
+          <div class="imagen-app">
+            <picture>
+              <source srcset="img/mockup/colaboradores.webp" type="image/webp">
+              <source srcset="img/colaboradores/.jpg" type="image/jpg">
+              <img src="img/mockup/colaboradores.jpg" alt="Vista de colaboradores en la app" loading="lazy">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seccion QR code  para descargar la app -->
+    <section class="descargar-app">
+      <div class="container">
+        <h3>Descarga la app oficial del Fest Bossa & Jazz</h3>
+        <p>Escanea el código QR con tu móvil y accede directamente a la guía del festival.</p>
+        <div class="qr-container">
+          <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy -->
+          <picture>
+            <source srcset="img/mockup/qrapp.webp" type="image/webp">
+            <source srcset="img/qrapp/.jpg" type="image/jpg">
+            <img src="img/mockup/qrapp.jpg" alt="Código QR para descargar la app del festival" loading="lazy">
+          </picture>
+        </div>
+        <small>*Disponible para Android y iOS</small>
+      </div>
+    </section>
+  </main>
+
+  <!--Footer derechos y enlaces para redes sociales-->
+  <footer>
+    <div class="footer-container">
+      <small>Síguenos en redes sociales:</small>
+      <div class="social-links">
+        <!-- enlaces externos con target=blank rel=noreferrer y titlle -->
+        <a href="https://www.instagram.com/festbossajazz/" target="_blank" rel="noreferrer"
+          title="Visitar Instagram del Fest Bossa & Jazz">
+          <img src="img/logo/instagram.png" alt="Instagram">
+        </a>
+
+        <!-- enlaces externos con target=blank rel=noreferrer y titlle -->
+        <a href="https://www.facebook.com/FestBossaeJazz/" target="_blank" rel="noreferrer"
+          title="Visitar Facebook del Fest Bossa & Jazz">
+          <img src="img/logo/facebook.png" alt="Facebook">
+        </a>
+
+        <!-- enlaces externos con target=blank rel=noreferrer y titlle -->
+        <a href="https://www.youtube.com/@FestBossaJazz" target="_blank" rel="noreferrer"
+          title="Visitar canal de YouTube del Fest Bossa & Jazz">
+          <img src="img/logo/youtube.png" alt="YouTube">
+        </a>
+
+        <!-- enlaces externos con target=blank rel=noreferrer y titlle -->
+        <a href="https://open.spotify.com/user/31sxgxo5gsuloizldkv2wtarhyc4" target="_blank" rel="noreferrer"
+          title="Escuchar en Spotify">
+          <img src="img/logo/spotify.png" alt="Spotify">
+        </a>
+      </div>
+      <p>&copy; 2025 Fest Bossa & Jazz. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
+<!-- ¿Fin?... -->

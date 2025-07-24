@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Define los caracteres en la página -->
+  <meta charset="utf-8">
+
+  <!-- Garantizar la compatibilidad con versiones antiguas de Internet Explorer -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Título que aparece en la pestaña del navegador y que ayuda al SEO -->
+  <title>Colaboradores - Fest Bossa & Jazz</title>
+
+  <!-- Icono de la pestaña -->
+  <link rel="icon" type="image/png" href="img/logo/logofbj.png">
+
+  <!-- Adaptada a dispositivos móviles (responsive) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Descripción de la página para los motores de búsqueda-->
+  <meta name="description"
+    content="Descubre la historia del Fest Bossa & Jazz, el festival que une música, cultura y naturaleza en Brasil.">
+
+  <!-- Carga de las fuentes: conecta con Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- Fuente utilizada -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Quicksand:wght@500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Recursos de fonts.gstatic.com se usen cruzando dominios -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Enlaza el archivo CSS de esta sección -->
+  <link rel='stylesheet' type='text/css' media='screen' href='css/colaboradores.css'>
+
+  <!-- Enlaza el JavaScript correspondiente, usando "defer" para que se cargue al final -->
+  <script src='js/main.js' defer></script> <!-- utilizo main pues no tengo js en esta seccion-->
+</head>
+
+<!--Inicio del menu hamburguesa y logo-->
+
+<body>
+  <header>
+    <nav class="main-nav">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html" title="Ir al inicio del sitio Web">
+          <img src="img/logo/logofbj.png" alt="logoFBJ" height="58">
+        </a>
+      </div>
+
+      <!-- Menú visible en escritorio -->
+      <ul class="nav-primary">
+        <li><a href="index.html" class="active" title="Ir al inicio del sitio web">Inicio</a></li>
+        <li><a href="pipa.html" title="Ver información de la edición Pipa 2025">Edición Pipa</a></li>
+        <li><a href="sobre.html" title="Leer sobre la historia del festival">El Festival</a></li>
+      </ul>
+
+      <!-- Botón del menu -->
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Menú hamburguesa (todos los enlaces en orden para móvil) -->
+      <ul class="nav-secondary" id="navMenu">
+        <!-- Enlaces solo para móvil -->
+        <li class="mobile-only"><a href="index.html">Inicio</a></li>
+        <li class="mobile-only"><a href="pipa.html">Edición Pipa</a></li>
+        <li class="mobile-only"><a href="sobre.html">El Festival</a></li>
+
+        <!-- Enlaces visibles siempre -->
+        <li><a href="app.html">App Oficial</a></li>
+        <li><a href="colaboradores.html">Colaboradores</a></li>
+        <li><a href="mapa.html">Cómo Llegar</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Colaboradores -->
+  <main>
+    <section class="colaboradores" id="colaboradores">
+      <div class="container">
+        <h2>Colaboradores locales</h2>
+        <p class="intro">
+          Fest Bossa & Jazz no sería posible sin el valioso apoyo de la comunidad local. En esta sección destacamos los
+          restaurantes y alojamientos que colaboran con la experiencia cultural del festival en Praia da Pipa.
+        </p>
+
+        <!-- seccion de los restaurante con img y listado en 2 columnas en grid -->
+        <div class="colaboradores-grid">
+          <div class="colaboradores-columna">
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <picture>
+              <source srcset="img/mockup/restaurantes.webp" type="image/webp">
+              <source srcset="img/mockup/restaurantes.jpg" type="image/jpg">
+              <img src="img/restaurantes.jpg" alt="Colaboradores - Restaurantes" loading="lazy">
+            </picture>
+            <!-- listado de restaurantes  -->
+            <h3>Restaurantes</h3>
+            <ul class="lista-colaboradores">
+              <li>Aprecie</li>
+              <li>Aventureiro</li>
+              <li>Barraca da Neide</li>
+              <li>Barraca do Professor</li>
+              <li>Boas Vindas</li>
+              <li>Casa da farinha</li>
+              <li>Chez Marilia</li>
+              <li>Crepettit</li>
+              <li>Dall Italiano</li>
+              <li>Layback</li>
+              <li>Macoco</li>
+              <li>Mais Empanadas</li>
+              <li>Orishas</li>
+              <li>Pipa Beach Club</li>
+              <li>Pipa Camaroes</li>
+              <li>Porca Vaca Beach</li>
+              <li>Restaurante Caxangá</li>
+              <li>Tempero Cunhaú</li>
+              <li>Tita Praia da Pipa</li>
+              <li>Top Summer Açaí</li>
+              <li>Tribus in Pipa</li>
+              <li>Trio Restô</li>
+            </ul>
+          </div>
+
+          <!-- Hoteles -->
+          <div class="colaboradores-columna">
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <picture>
+              <source srcset="img/mockup/hoteles.webp" type="image/webp">
+              <source srcset="img/mockup/hoteles.jpg" type="image/jpg">
+              <img src="img/mockup/hoteles.jpg" alt="Colaboradores - Hoteles">
+            </picture>
+            <!-- listado de alojamientos -->
+            <h3>Alojamientos</h3>
+            <ul class="lista-colaboradores">
+              <li>Filha da Lua Eco Lodge</li>
+              <li>Hotel Pipa Atlântico</li>
+              <li>Hotel Ponta do Madeiro</li>
+              <li>Hotel Sun Bay</li>
+              <li>Ma Page Île de Pipa Resort</li>
+              <li>Pipa's Bay Hotel</li>
+              <li>Pousada Alto da Pipa</li>
+              <li>Pousada Bicho Preguiça</li>
+              <li>Pousada Catavento</li>
+              <li>Pousada da Ladeira</li>
+              <li>Pousada Oasis</li>
+              <li>Pousada pedra D'água</li>
+              <li>Posada Praiana</li>
+              <li>Pousada Tartaruga</li>
+              <li>Quarto à Vista - Qavi</li>
+              <li>Recanto da Mata</li>
+              <li>Recanto Nalu</li>
+              <li>Sempre Vivo Hotel</li>
+              <li>Sombra e Água Fresca</li>
+              <li>Vila Alemã</li>
+              <li>Villa Di Milos</li>
+              <li>Xamã Senses Hotel Pousada</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer derechos y enlaces para redes sociales -->
+  <footer>
+    <div class="footer-container">
+      <small>Síguenos en redes sociales:</small>
+      <div class="social-links">
+        <!-- enlaces externos con target=blank rel=noreferrer y titlle -->
+        <a href="https://www.instagram.com/festbossajazz/" target="_blank" rel="noreferrer"
+          title="Visitar Instagram del Fest Bossa & Jazz">
+          <img src="img/logo/instagram.png" alt="Instagram">
+        </a>
+
+        <!-- enlaces externos con target=blank rel=noreferrer y titlle -->
+        <a href="https://www.facebook.com/FestBossaeJazz/" target="_blank" rel="noreferrer"
+          title="Visitar Facebook del Fest Bossa & Jazz">
+          <img src="img/logo/facebook.png" alt="Facebook">
+        </a>
+
+        <!-- enlaces externos con target=blank rel=noreferrer y titlle -->
+        <a href="https://www.youtube.com/@FestBossaJazz" target="_blank" rel="noreferrer"
+          title="Visitar canal de YouTube del Fest Bossa & Jazz">
+          <img src="img/logo/youtube.png" alt="YouTube">
+        </a>
+
+        <!-- enlaces externos con target=blank rel=noreferrer y titlle -->
+        <a href="https://open.spotify.com/user/31sxgxo5gsuloizldkv2wtarhyc4" target="_blank" rel="noreferrer"
+          title="Escuchar en Spotify">
+          <img src="img/logo/spotify.png" alt="Spotify">
+        </a>
+      </div>
+      <p>&copy; 2025 Fest Bossa & Jazz. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
+<!-- ¿Fin?... -->

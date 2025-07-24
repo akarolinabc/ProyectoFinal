@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Define los caracteres en la página -->
+  <meta charset="utf-8">
+
+  <!-- Garantizar la compatibilidad con versiones antiguas de Internet Explorer -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Título que aparece en la pestaña del navegador y que ayuda al SEO -->
+  <title>Como Llegar - Fest Bossa & Jazz</title>
+
+  <!-- Icono de la pestaña -->
+  <link rel="icon" type="image/png" href="img/logo/logofbj.png">
+
+  <!-- Adaptada a dispositivos móviles (responsive) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Descripción de la página para los motores de búsqueda-->
+  <meta name="description"
+    content="Descubre la historia del Fest Bossa & Jazz, el festival que une música, cultura y naturaleza en Brasil.">
+
+  <!-- Carga de las fuentes: conecta con Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- Recursos de fonts.gstatic.com se usen cruzando dominios -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fuente utilizada -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Quicksand:wght@500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Enlaza el archivo CSS de esta sección -->
+  <link rel='stylesheet' type='text/css' media='screen' href='css/mapa.css'>
+
+  <!-- Enlaza el JavaScript correspondiente, usando "defer" para que se cargue al final -->
+  <script src='js/main.js' defer></script> <!-- utilizo main pues no tengo js en esta seccion-->
+</head>
+
+<!--Inicio del menu hamburguesa y logo-->
+
+<body>
+  <header>
+    <nav class="main-nav">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html" title="Ir al inicio del sitio Web">
+          <img src="img/logo/logofbj.png" alt="logoFBJ" height="58">
+        </a>
+      </div>
+
+      <!-- Menú visible en escritorio -->
+      <ul class="nav-primary">
+        <li><a href="index.html" class="active" title="Ir al inicio del sitio web">Inicio</a></li>
+        <li><a href="pipa.html" title="Ver información de la edición Pipa 2025">Edición Pipa</a></li>
+        <li><a href="sobre.html" title="Leer sobre la historia del festival">El Festival</a></li>
+      </ul>
+
+      <!-- Botón del menu -->
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Menú hamburguesa (todos los enlaces en orden para móvil) -->
+      <ul class="nav-secondary" id="navMenu">
+        <!-- Enlaces solo para móvil -->
+        <li class="mobile-only"><a href="index.html">Inicio</a></li>
+        <li class="mobile-only"><a href="pipa.html">Edición Pipa</a></li>
+        <li class="mobile-only"><a href="sobre.html">El Festival</a></li>
+
+        <!-- Enlaces visibles siempre -->
+        <li><a href="app.html">App Oficial</a></li>
+        <li><a href="colaboradores.html">Colaboradores</a></li>
+        <li><a href="mapa.html">Cómo Llegar</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seccion como llegar -->
+  <main>
+    <section class="como-llegar">
+      <div class="container">
+        <h2>Cómo llegar al festival</h2>
+        <p class="intro">
+          La Praia da Pipa es uno de los destinos más encantadores de Brasil, situada en el litoral del estado de Rio
+          Grande do Norte. Para disfrutar del Fest Bossa & Jazz, puedes llegar por diferentes medios. Consulta las
+          opciones a continuación y visualiza el mapa con la mejor ruta hacia este paraíso.
+        </p>
+
+        <!-- Contenedor del mapa -->
+        <div class="mapa-container"> <!-- enlaces externos con target=blank rel=noreferrer y titlle -->
+          <iframe class="mapa-iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126393.19537052178!2d-35.1804202!3d-6.2525239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2f88a7759d3b7%3A0xc873d23beee259b9!2sPipa%2C%20Tibau%20do%20Sul%20-%20RN!5e0!3m2!1spt-BR!2sbr!4v1721136000000!5m2!1spt-BR!2sbr"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa de ubicación del festival en Praia da Pipa, Brasil">
+          </iframe>
+        </div>
+
+        <!-- card animadas para avión -->
+        <div class="opciones-transporte">
+          <div class="transporte-card">
+            <h3>Avión</h3>
+            <p>Vuela hasta el Aeropuerto de Natal (NAT) y continúa en transfer o coche durante aproximadamente 1h30.</p>
+          </div>
+
+          <!-- card animadas coche -->
+          <div class="transporte-card">
+            <h3>Coche</h3>
+            <p>Pipa se encuentra a 85 km de Natal. El viaje se realiza por la BR-101 y luego RN-003 hasta Tibau do Sul.
+            </p>
+          </div>
+
+          <!-- card animadas autobús -->
+          <div class="transporte-card">
+            <h3>Transfer / Autobús</h3>
+            <p>Hay empresas que ofrecen servicios de transfer o líneas regulares de autobús entre Natal y Pipa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer derechos y enlaces para redes sociales -->
+  <footer>
+    <div class="footer-container">
+      <small>Síguenos en redes sociales:</small>
+      <div class="social-links">
+        <!-- enlaces externos con target=blank rel=noreferrer y titlle -->
+        <a href="https://www.instagram.com/festbossajazz/" target="_blank" rel="noreferrer"
+          title="Visitar Instagram del Fest Bossa & Jazz">
+          <img src="img/logo/instagram.png" alt="Instagram">
+        </a>
+
+        <!-- enlaces externos con target=blank rel=noreferrer y titlle -->
+        <a href="https://www.facebook.com/FestBossaeJazz/" target="_blank" rel="noreferrer"
+          title="Visitar Facebook del Fest Bossa & Jazz">
+          <img src="img/logo/facebook.png" alt="Facebook">
+        </a>
+
+        <!-- enlaces externos con target=blank rel=noreferrer y titlle -->
+        <a href="https://www.youtube.com/@FestBossaJazz" target="_blank" rel="noreferrer"
+          title="Visitar canal de YouTube del Fest Bossa & Jazz">
+          <img src="img/logo/youtube.png" alt="YouTube">
+        </a>
+
+        <!-- enlaces externos con target=blank rel=noreferrer y titlle -->
+        <a href="https://open.spotify.com/user/31sxgxo5gsuloizldkv2wtarhyc4" target="_blank" rel="noreferrer"
+          title="Escuchar en Spotify">
+          <img src="img/logo/spotify.png" alt="Spotify">
+        </a>
+      </div>
+      <p>&copy; 2025 Fest Bossa & Jazz. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
+<!-- ¿Fin?... -->

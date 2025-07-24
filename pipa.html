@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Define los caracteres en la página -->
+  <meta charset="utf-8">
+
+  <!-- Garantizar la compatibilidad con versiones antiguas de Internet Explorer -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Título que aparece en la pestaña del navegador y que ayuda al SEO -->
+  <title>Edición Pipa - Fest Bossa & Jazz</title>
+
+  <!-- Icono de la pestaña -->
+  <link rel="icon" type="image/png" href="img/logo/logofbj.png">
+
+  <!-- Adaptada a dispositivos móviles (responsive) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Descripción de la página para los motores de búsqueda-->
+  <meta name="description"
+    content="Descubre la historia del Fest Bossa & Jazz, el festival que une música, cultura y naturaleza en Brasil.">
+
+  <!-- Carga de las fuentes: conecta con Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- Recursos de fonts.gstatic.com se usen cruzando dominios -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fuente utilizada -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Quicksand:wght@500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Enlaza el archivo CSS de esta sección -->
+  <link rel="stylesheet" href="css/pipa.css" media="screen">
+
+  <!-- Enlaza el JavaScript correspondiente, usando "defer" para que se cargue al final -->
+  <script src="js/pipa.js" defer></script>
+</head>
+
+<!--Inicio del menu hamburguesa y logo-->
+
+<body>
+  <header>
+    <nav class="main-nav">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html" title="Ir al inicio del sitio Web">
+          <img src="img/logo/logofbj.png" alt="logoFBJ" height="58">
+        </a>
+      </div>
+
+      <!-- Menú visible en escritorio -->
+      <ul class="nav-primary">
+        <li><a href="index.html" class="active" title="Ir al inicio del sitio web">Inicio</a></li>
+        <li><a href="pipa.html" title="Ver información de la edición Pipa 2025">Edición Pipa</a></li>
+        <li><a href="sobre.html" title="Leer sobre la historia del festival">El Festival</a></li>
+      </ul>
+
+      <!-- Botón del menu -->
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Menú hamburguesa (todos los enlaces en orden para móvil) -->
+      <ul class="nav-secondary" id="navMenu">
+        <!-- Enlaces solo para móvil -->
+        <li class="mobile-only"><a href="index.html">Inicio</a></li>
+        <li class="mobile-only"><a href="pipa.html">Edición Pipa</a></li>
+        <li class="mobile-only"><a href="sobre.html">El Festival</a></li>
+
+        <!-- Enlaces visibles siempre -->
+        <li><a href="app.html">App Oficial</a></li>
+        <li><a href="colaboradores.html">Colaboradores</a></li>
+        <li><a href="mapa.html">Cómo Llegar</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- programacion de artistas confirmados en carrousel infinito -->
+  <main>
+    <!-- Lightbox oculto -->
+    <div class="lightbox-overlay" id="lightbox">
+      <div class="lightbox-popup">
+        <img id="lightbox-img" src="img/backgrounds/streetband.webp" alt="Imagen del Streetband">
+        <p class="bio-artista" id="lightbox-text"></p>
+        <button class="cerrar" onclick="cerrarLightbox()">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Sección carrusel infinito -->
+    <section class="programacion-confirmada">
+      <div class="container">
+        <h2>Artistas Confirmados</h2>
+
+        <div class="carrusel-wrapper">
+          <button class="btn-prev" aria-label="Anterior">&#10094;</button>
+
+          <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+          <div class="carrousel-confirmados">
+            <div class="artista-item"
+              data-bio="ALENKO - Figura clave de la escena pop 'n' groove de Ginebra (Suiza), se ha distinguido con varios premios, entre ellos el de Mejor Artista Francófono en los Freddie Mercury Live Awards de Montreux. Con seis álbumes y más de 500 conciertos, ha actuado en prestigiosos festivales y salas como el Festival Paléo, el Festival de Jazz de Montreux, Voix de Fête, el Victoria Hall y el Divan du Monde, además de realizar giras por China.">
+              <picture>
+                <source srcset="img/artistas/alenko.webp" type="image/webp">
+                <source srcset="img/artistas/alenko.jpg" type="image/jpg">
+                <img src="img/artistas/alenko.jpg" alt="Foto de Alenko" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="El grupo musical Anatolyan presenta la obra instrumental original del compositor riograndense Adriano Pytyguary, retratando la musicalidad de un Nordeste oriental, basada en sonidos árabes, rock psicodélico de Turquía y elementos de la música regional de Brasil.Con sede en Natal, la banda se ha presentado en importantes espacios culturales de la capital de Rio Grande do Norte.">
+              <picture>
+                <source srcset="img/artistas/anatolyan.webp" type="image/webp">
+                <source srcset="img/artistas/anatolyan.jpg" type="image/jpg">
+                <img src="img/artistas/anatolyan.jpg" alt="Foto de ANATOLYAN" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="BANDIGALADO - Bandigalado es una banda de rock de Natal compuesta por siete miembros: Alexandre Azevedo (voz), Lucien Dantas (batería), André Macedo (bajo), Cláudio Macedo (guitarra rítmica), Silvério Neto (guitarra principal), Misael Queiroz (guitarra principal) y Pedro Ratts (teclado). Fue fundada en 2011 por Alexandre, Lucien, André y Cláudio, amigos de la infancia y aficionados al rock, para divertirse y socializar con amigos y familiares cercanos.">
+              <picture>
+                <source srcset="img/artistas/bandigalado.webp" type="image/webp">
+                <source srcset="img/artistas/bandigalado.jpg" type="image/jpg">
+                <img src="img/artistas/bandigalado.jpg" alt="Foto de BANDIGALADO" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="CAJU COM JAZZ + HELI MEDEIROS - Trío instrumental de jazz, bossa y MPB invita a Heli Medeiros, voz sofisticada del Seridó, para un show lleno de musicalidad, emoción y versatilidad sonora.Formado en 2022, el trío instrumental está compuesto por Stallone Terto (guitarra), Mônica Michelly (bajo) y Anderson Mello (batería), destacándose actualmente en la escena musical instrumental brasileña con un refinado trabajo original.">
+              <picture>
+                <source srcset="img/artistas/cajucomjazz.webp" type="image/webp">
+                <source srcset="img/artistas/cajucomjazz.jpg" type="image/jpg">
+                <img src="img/artistas/cajucomjazz.jpg" alt="Foto de CAJU COM JAZZ" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="CHORINHO DA PIPA - Chorinho da Pipa es un proyecto con ocho años de trayectoria que busca promover el arte en Praia da Pipa y sus alrededores a través de la música brasileña. El grupo se presenta semanalmente como parte del calendario cultural de Praia da Pipa. Para esta edición del Fest Bossa & Jazz, presentan un homenaje a K-Ximbinho, reconocido músico brasileño que se destacó como compositor, arreglista, clarinetista, saxofonista y director de orquesta.">
+              <picture>
+                <source srcset="img/artistas/chorinhodapipa.webp" type="image/webp">
+                <source srcset="img/artistas/chorinhodapipa.jpg" type="image/jpg">
+                <img src="img/artistas/chorinhodapipa.jpg" alt="Foto de CHORINHO DA PIPA" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="DIANA MIRANDA - Diana revive los clásicos de la Bossa Nova con elegancia y emoción. Una voz internacional que conecta generaciones con Jobim, Gilberto y Vinícius.Más que un homenaje, (Bossa Nova Songbook) es un reencuentro con el alma de la música brasileña, liderado por un artista que transforma cada nota en emoción.Músicos que acompañan el espectáculo: • Beto Preah – batería • Paulinho Ditarso – guitarra • Clodoaldo Pessoa – teclado • Maurício Narcízio – bajo">
+              <picture>
+                <source srcset="img/artistas/dianamiranda.webp" type="image/webp">
+                <source srcset="img/artistas/dianamiranda.jpg" type="image/jpg">
+                <img src="img/artistas/dianamiranda.jpg" alt="Foto de DIANA MIRANDA" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="DIOGO DAS VIRGENS - Diogo das Virgens es un cantante y multiinstrumentista de Natal, Rio Grande do Norte, con amplia experiencia en presentaciones en Brasil y en el extranjero. Toca guitarra, armónica, guitarra eléctrica, piano y saxofón.Tiene una carrera de casi 20 años y ha actuado en Italia, España, Portugal, Países Bajos, Noruega, México y Estados Unidos. En este último país, ganó el Premio de la Prensa de 2018 al Mejor Cantante Brasileño en Estados Unidos.">
+              <picture>
+                <source srcset="img/artistas/diogodasvirgens.webp" type="image/webp">
+                <source srcset="img/artistas/diogodasvirgens.jpg" type="image/jpg">
+                <img src="img/artistas/diogodasvirgens.jpg" alt="Foto de DIOGO DAS VIRGENS" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="EDJA ALVES - ¡El espectáculo - Na Bossa e no Samba - es una experiencia increíble! La mezcla de estilos musicales, como bossa nova, samba, jazz, samba funk y afrosamba, promete crear una atmósfera única y contagiosa. Con Edja Alvess como la voz distintiva, el espectáculo es una celebración de la cultura brasileña que inspira a bailar y cantar. La combinación del swing de samba y la belleza de la bossa nova crea un sonido lleno de nostalgia, sofisticación y energía positiva.">
+              <picture>
+                <source srcset="img/artistas/edjaalves.webp" type="image/webp">
+                <source srcset="img/artistas/edjaalves.jpg" type="image/jpg">
+                <img src="img/artistas/edjaalves.jpg" alt="Foto de EDJA ALVES" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="EDUARDO TAUFIC TRÍO - Formado por el pianista, compositor y arreglista Eduardo Taufic, la bajista Monica Michelly y el baterista Darlan Marley, el EDUARDO TAUFIC TRIO es un grupo de jazz brasileño que se destaca por la originalidad y estética creativa de sus arreglos, por sus emocionantes reinterpretaciones de clásicos de la MPB y del Jazz, y por su trabajo original de gran relevancia en la escena de la música instrumental brasileña.">
+              <picture>
+                <source srcset="img/artistas/eduardotaufic.webp" type="image/webp">
+                <source srcset="img/artistas/eduardotaufic.jpg" type="image/jpg">
+                <img src="img/artistas/eduardotaufic.jpg" alt="Foto de EDUARDO TAUFIC TRÍO" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="GAL MENEZES - Gal Menezes homenajea con pasión a Gal Costa.Tras la repentina pérdida de su ídolo, Gal Menezes es una de las responsables de mantener viva a Gal Costa en el corazón de sus fans. El espectáculo es un emotivo homenaje a la cantante bahiana. Un espectáculo nostálgico y poderoso, que revive los clásicos de la MPB con autenticidad y emoción.">
+              <picture>
+                <source srcset="img/artistas/galmenezes.webp" type="image/webp">
+                <source srcset="img/artistas/galmenezes.jpg" type="image/jpg">
+                <img src="img/artistas/galmenezes.jpg" alt="Foto de GAL MENEZES" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="INDIANA NOMMA - Durante 25 años presentando el espectáculo Mercedes Sosa: La Voz de los Sin Voz, la cantante hondureño-brasileña Indiana Nomma fue declarada por el gobierno argentino y los herederos de Mercedes Sosa en 2023, la representante oficial de la voz más grande de América Latina, recibiendo el premio internacional MARCA PAÍS “AMIGO DE ARGENTINA”.">
+              <picture>
+                <source srcset="img/artistas/indiananomma.webp" type="image/webp">
+                <source srcset="img/artistas/indiananomma.jpg" type="image/jpg">
+                <img src="img/artistas/indiananomma.jpg" alt="Foto de INDIANA NOMMA" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="JO BAY - ANDERSON PESSOA - Una celebración de la bossa nova y el jazz que marcó historia. JO Bay, Anderson Pessoa y banda reviven el icónico álbum Getz/Gilberto en el mágico escenario de Pipa.Para este espectáculo, Jo Bay, Anderson Pessoa, Airton Guimarães y Cleber Campos darán vida a la belleza y frescura de la bossa nova de João Gilberto y Tom Jobim, y a la energía jazzística de Stan Getz. Estas increíbles actuaciones se presentarán en el idílico escenario de la Playa de Pipa.">
+              <picture>
+                <source srcset="img/artistas/jobay.webp" type="image/webp">
+                <source srcset="img/artistas/jobay.jpg" type="image/jpg">
+                <img src="img/artistas/jobay.jpg" alt="JO BAY - ANDERSON PESSOA" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="JOSE PORTILLO - La llegada del virtuoso pianista cubano, José Portillo, a Brasil promete ser un encuentro único entre dos países ricos en cultura musical: Cuba y Brasil. Portillo realizará su primer show en el país en el Fest Bossa & Jazz, actuando junto a los talentosos músicos Glauco Solter (bajo), Cuca Teixeira (batería) y Gabriel Moraes (guitarra) en una unión de talentos que resultará en una experiencia inolvidable para los amantes de la música instrumental.">
+              <picture>
+                <source srcset="img/artistas/joseportillo.webp" type="image/webp">
+                <source srcset="img/artistas/joseportillo.jpg" type="image/jpg">
+                <img src="img/artistas/joseportillo.jpg" alt="Foto de JOSE PORTILLO" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="KELLY LIRA - Cantautora con 19 años de experiencia musical, autenticidad y versatilidad. Kelly Lira consolida su trayectoria artística con un estilo distintivo, marcado por canciones originales y una identidad musical única. Con una carrera ecléctica, ha compartido escenario con grandes figuras de la música brasileña, como Moraes Moreira, Vanessa da Mata, Tânia Alves, Renato Braz y Leila Pinheiro, abriendo espectáculos que destacaron su potencia vocal y presencia escénica.">
+              <picture>
+                <source srcset="img/artistas/kellylira.webp" type="image/webp">
+                <source srcset="img/artistas/kellylira.jpg" type="image/jpg">
+                <img src="img/artistas/kellylira.webp" alt="Foto de KELLY LIRA" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="LARYSSA COSTA - Un homenaje profundo a Gilberto Gil. Laryssa Costa interpreta sus clásicos con emoción y poesía, celebrando la brasilidad y la fuerza cultural de este ícono nacional y cuenta con la dirección musical de Jubileu Filho (guitarra y mandolina), junto con los músicos Paulo Milton (contrabajo), Bruno Cirino (acordeón) y Ramon Gabriel (batería/percusión),">
+              <picture>
+                <source srcset="img/artistas/laryssacosta.webp" type="image/webp">
+                <source srcset="img/artistas/laryssacosta.jpg" type="image/jpg">
+                <img src="img/artistas/laryssacosta.jpg" alt="LARYSSA COSTA" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="LIZ ROSA - La cantante Liz Rosa regresa al escenario del Fest Bossa & Jazz para celebrar la obra de Elis Regina. Con interpretaciones auténticas y nuevos arreglos, Liz invita al público a un viaje por las distintas etapas de la carrera de Pimentinha, explorando tanto éxitos icónicos como joyas menos conocidas interpretadas por Elis.Junto a Eduardo Taufic (piano), Daniel Ribeiro (bajo), Jow Ferreira (guitarra) y Darlan Marley (batería), Liz explora clásicos inolvidables como “El borracho y el equilibrista” (João Bosco y Aldir Blanc) y “Como nuestros padres” (Belchior), además de rarezas como “Moda de Sangue” (Ivaldo Roque y Jerónimo Jardim) y “Jardins da Infância” (João Bosco y Aldir Blanc).">
+              <picture>
+                <source srcset="img/artistas/lizrosa.webp" type="image/webp">
+                <source srcset="img/artistas/lizrosa.jpg" type="image/jpg">
+                <img src="img/artistas/lizrosa.jpg" alt="Foto de LIZ ROSA" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="LOBÃO - El espectáculo, que regresa en 2025 tras su éxito en otras ciudades, invita al público a un viaje musical único. A diferencia de la electrizante gira del Lobão Power Trio, Luau Indoor crea una atmósfera de cercanía y emoción, donde el artista y su público celebran juntos la vida, el arte y los recuerdos. Luau Indoor es una inmersión profunda en la carrera de Lobão, donde cada canción del repertorio no es solo melodías y armonías, sino también historias que ayudan a construir la narrativa de una vida dedicada al arte.">
+              <picture>
+                <source srcset="img/artistas/lobao.webp" type="image/webp">
+                <source srcset="img/artistas/lobao.jpg" type="image/jpg">
+                <img src="img/artistas/lobao.jpg" alt="Foto de LOBÃO" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="MARTUAN - Formada por los músicos Gabo Castello (piano y voz), Mato Castello (congas y voz), Facundo CUFA Altuna (trompeta) y Leandro Cabeza (batería), la banda tiene 5 años de historia y toca música latinoamericana (jazz, latin-jazz, jazz-fusión, candombe, son cubano y soul) presentándose en la rica escena musical de Praia da Pipa. Para Fest Bossa & Jazz preparan un repertorio exclusivo para acercar este jazz latino, rico en improvisación, al gran público local, nacional e internacional que asiste al festival.">
+              <picture>
+                <source srcset="img/artistas/martuan.webp" type="image/webp">
+                <source srcset="img/artistas/martuan.jpg" type="image/jpg">
+                <img src="img/artistas/martuan.jpg" alt="Foto de MARTUAN" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="PIPA GROOVE - Con un sonido que combina la libertad del jazz con la energía del hip hop y los ritmos brasileños, el trío *Pipa Groove* llega al festival con un enfoque moderno, vibrante y original. Integrado por *Jonathas Rodrigo (bajo), **Daniel Grossmann (batería)* y *Maurício Tavella (guitarra),* el grupo imprime su propia identidad en cada actuación, fusionando ritmos vibrantes, improvisación y texturas que revelan la riqueza de la música instrumental urbana.">
+              <picture>
+                <source srcset="img/artistas/pipagroove.webp" type="image/webp">
+                <source srcset="img/artistas/pipagroove.jpg" type="image/jpg">
+                <img src="img/artistas/pipagroove.webp" alt="Foto de PIPA GROOVE" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="RAQUEL OLIVEIRA - Raquel Oliveira, saxofonista de Rio Grande do Norte con una amplia trayectoria en la música instrumental, presenta un espectáculo que se entrelaza con el jazz, la bossa nova y la riqueza de los ritmos brasileños. Con un repertorio que fusiona clásicos y composiciones contemporáneas, su actuación ofrece una experiencia sofisticada y cautivadora para el público del Fest Bossa & Jazz.">
+              <picture>
+                <source srcset="img/artistas/raqueloliveira.webp" type="image/webp">
+                <source srcset="img/artistas/raqueloliveira.jpg" type="image/jpg">
+                <img src="img/artistas/raqueloliveira.jpg" alt="Foto de RAQUEL OLIVEIRA" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="RODRIGO SURICATO - Ganador del Grammy Latino al Mejor Álbum de Rock Brasileño en 2016 y nominado nuevamente por su próximo álbum, el compositor, multiinstrumentista y productor Rodrigo Suricato es uno de los artistas/músicos más célebres de la última década. Su proyecto 'SURICATO' es considerado una de las grandes referencias del Folk/Rock brasileño, con un estilo único, destacado en grandes festivales como Rock in Rio y Lollapalooza.">
+              <picture>
+                <source srcset="img/artistas/rodrigosuricato.webp" type="image/webp">
+                <source srcset="img/artistas/rodrigosuricato.jpg" type="image/jpg">
+                <img src="img/artistas/rodrigosuricato.jpg" alt="Foto de RODRIGO SURICATO" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="ROSA PASSOS - Cantautora y guitarrista, nacida y criada en Salvador, Bahía, rodeada de música. En 1972, su composición Mutilados ganó el primer premio en el festival de la Universidad de Bahía. Su primer álbum, Recriação, se lanzó en 1979, con el compositor Fernando de Oliveira, colaborador de muchos años.Rosa cuenta con una amplia experiencia internacional, habiendo actuado en Latinoamérica, Europa y Estados Unidos junto a grandes figuras de la música mundial, como Ron Carter, Paquito D'Rivera, Yo-Yo Ma, Cyro Baptista, Henri Salvador, entre otros.">
+              <picture>
+                <source srcset="img/artistas/rosapassos.webp" type="image/webp">
+                <source srcset="img/artistas/rosapassos.jpg" type="image/jpg">
+                <img src="img/artistas/rosapassos.jpg" alt="Foto de ROSA PASSOS" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="SKARIMBÓ - La banda Skarimbó ha estado activa en la escena musical de Natal, Rio Grande do Norte, desde 2014. Desde entonces, han realizado numerosas presentaciones y han mantenido un pulso constante de dedicación, amor y resiliencia, conquistando las calles de la ciudad con su sonido sugerente y sus letras impactantes. La banda participó con éxito en un festival en São Miguel do Gostoso, pero esta será su primera aparición en el Fest Bossa & Jazz de Pipa.">
+              <picture>
+                <source srcset="img/artistas/skarimbo.webp" type="image/webp">
+                <source srcset="img/artistas/skarimbo.jpg" type="image/jpg">
+                <img src="img/artistas/skarimbo.jpg" alt=" Foto de SKARIMBÓ" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="SUELDO SOARESS - El artista de Rio Grande do Norte, Sueldo Soaress, celebra cuatro décadas de destacada trayectoria como cantante y compositor. Para conmemorar esta ocasión especial, ha preparado el espectáculo Rebeldia, que se estrenará en el Fest Bossa & Jazz 2025. El espectáculo “Rebeldia” promete repasar sus grandes éxitos, además de presentar material nuevo, en un repertorio que refleja su audacia artística, su enfoque visceral en la interpretación y su compromiso con la autenticidad.">
+              <picture>
+                <source srcset="img/artistas/sueldosoares.webp" type="image/webp">
+                <source srcset="img/artistas/sueldosoares.jpg" type="image/jpg">
+                <img src="img/artistas/sueldosoares.jpg" alt="Foto de SUELDO SOARESS" loading="lazy">
+              </picture>
+            </div>
+
+            <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+            <div class="artista-item"
+              data-bio="VINTAGE PEPPER - Con el lema Blues, soul y diversión, la banda Vintage Pepper, fundada en Recife, realiza espectáculos memorables desde 2010. La banda tiene un estilo distintivo. VINTAGE está presente tanto en su vestuario como en su repertorio, que, además de blues y soul, incluye toques de jazz y clásicos internacionales. PEPPER evoca una atmósfera sensual, característica del blues lento, y versiones más vibrantes y animadas. Todo esto, transmitido a través de una potente y hermosa voz femenina.">
+              <picture>
+                <source srcset="img/artistas/vintagepepper.webp" type="image/webp">
+                <source srcset="img/artistas/vintagepepper.jpg" type="image/jpg">
+                <img src="img/artistas/vintagepepper.jpg" alt="Fot de VINTAGE PEPPER" loading="lazy">
+              </picture>
+            </div>
+            <!-- fin del carrousel -->
+
+            <!-- Buton izq y der del carrousel -->
+            <button class="btn-next" aria-label="Siguiente">&#10095;</button>
+          </div>
+        </div>
+      </div>
+    </section> <!-- fin de la seccion artistas confirmados-->
+
+    <!-- Sección Escenarios -->
+    <section class="escenarios" title="Sección de escenarios del festival">
+      <div class="container">
+        <h2>Escenarios del Festival</h2>
+
+        <div class="escenario-filtro"> <!--botones de filtro de Escenarios-->
+          <button data-tipo="diurno" class="activo" title="Mostrar escenarios diurnos">Diurnos</button>
+          <button data-tipo="nocturno" title="Mostrar escenarios nocturnos">Nocturnos</button>
+          <button data-tipo="jam" title="Mostrar escenarios Jam Session">Jam Session</button>
+        </div>
+
+        <div class="escenario-grid">
+          <!-- Escenarios Diurnos -->
+          <div class="escenarios-categoria diurno" title="Escenarios Diurnos del festival">
+            <div class="escenarios-fila">
+              <div class="escenario" title="Escenario Aventureiro">
+                <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+                <picture title="Imagen del escenario Aventureiro">
+                  <source srcset="img/escenarios/aventureiro.webp" type="image/webp">
+                  <source srcset="img/escenarios/aventureiro.jpg" type="image/jpg">
+                  <img src="img/escenarios/aventureiro.jpg" alt="Escenario Aventureiro" title="Escenario Aventureiro"
+                    loading="lazy">
+                </picture>
+                <h4>Aventureiro</h4>
+                <p class="escenario-desc">Un escenario con los pies en la arena, perfecto para vivir la música bajo el
+                  sol de Pipa y el vaivén del mar como telón de fondo.</p>
+              </div>
+
+              <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+              <div class="escenario" title="Escenario Lagoa">
+                <picture title="Imagen del escenario Lagoa">
+                  <source srcset="img/escenarios/lagoa.webp" type="image/webp">
+                  <source srcset="img/escenarios/lagoa.jpg" type="image/jpg">
+                  <img src="img/escenarios/lagoa.jpg" alt="Escenario Lagoa" title="Escenario Lagoa" loading="lazy">
+                </picture>
+                <h4>Lagoa</h4>
+                <p class="escenario-desc">Un entorno íntimo donde la laguna se encuentra con el mar. Escenario ideal
+                  para presentaciones acústicas y momentos de conexión total con la naturaleza.</p>
+              </div>
+
+              <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+              <div class="escenario" title="Escenario Orishas">
+                <picture title="Imagen del escenario Orishas">
+                  <source srcset="img/escenarios/orishas.webp" type="image/webp">
+                  <source srcset="img/escenarios/orishas.jpg" type="image/jpg">
+                  <img src="img/escenarios/orishas.jpg" alt="Escenario Orishas" title="Escenario Orishas"
+                    loading="lazy">
+                </picture>
+                <h4>Orishas</h4>
+                <p class="escenario-desc">Con un ambiente relajado y pie en la arena, este escenario vibra con energía
+                  tropical, ideal para los sonidos más suaves y envolventes.</p>
+              </div>
+
+              <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+              <div class="escenario" title="Escenario Pipa Beach Club">
+                <picture title="Imagen del escenario Pipa Beach Club">
+                  <source srcset="img/escenarios/pipabeachclub.webp" type="image/webp">
+                  <source srcset="img/escenarios/pipabeachclub.jpg" type="image/jpg">
+                  <img src="img/escenarios/pipa-beach.jpg" alt="Escenario Pipa Beach Club"
+                    title="Escenario Pipa Beach Club" loading="lazy">
+                </picture>
+                <h4>Pipa Beach Club</h4>
+                <p class="escenario-desc">Frente al mar, este icónico punto combina gastronomía, vista privilegiada y
+                  conciertos que fluyen con la brisa atlántica.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Escenarios Nocturnos -->
+          <div class="escenarios-categoria nocturno" title="Escenarios Nocturnos del festival">
+            <div class="escenarios-fila">
+              <div class="escenario" title="Escenario Atlântico">
+                <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+                <picture title="Imagen del escenario Atlântico">
+                  <source srcset="img/escenarios/atlantico.webp" type="image/webp">
+                  <source srcset="img/escenarios/atlantico.jpg" type="image/jpg">
+                  <img src="img/escenarios/atlantico.jpg" alt="Escenario Atlântico" title="Escenario Atlântico"
+                    loading="lazy">
+                </picture>
+                <h4>Atlântico</h4>
+                <p class="escenario-desc">Rodeado de naturaleza exuberante, este escenario se instala en el corazón
+                  verde del Hotel Atlântico. Ofrece un ambiente sereno e inmersivo donde la música se fusiona con la
+                  tranquilidad de la noche.</p>
+              </div>
+
+              <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+              <div class="escenario" title="Escenario Praça do Pescador">
+                <picture title="Imagen del escenario Praça do Pescador">
+                  <source srcset="img/escenarios/pracadopescador.webp" type="image/webp">
+                  <source srcset="img/escenarios/pracadopescador.jpg" type="image/jpg">
+                  <img src="img/escenarios/pracadopescador.jpg" alt="Escenario Praça do Pescador"
+                    title="Escenario Praça do Pescador" loading="lazy">
+                </picture>
+                <h4>Praça do Pescador</h4>
+                <p class="escenario-desc">El alma vibrante de Pipa. Este escenario al aire libre es el punto de
+                  encuentro más emblemático del centro, donde se cruzan turistas, artistas y locales en noches
+                  inolvidables al ritmo del jazz y la bossa.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Jam Sessions -->
+          <div class="escenarios-categoria jam" title="Escenarios Jam Session del festival">
+            <div class="escenarios-fila">
+              <div class="escenario" title="Escenario Galeria das Cores">
+                <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+                <picture title="Imagen del escenario Galeria das Cores">
+                  <source srcset="img/escenarios/galeriacores.webp" type="image/webp">
+                  <source srcset="img/escenarios/galeriacores.jpg" type="image/jpg">
+                  <img src="img/escenarios/galeria-cores.jpg" alt="Escenario Galeria das Cores"
+                    title="Escenario Galeria das Cores" loading="lazy">
+                </picture>
+                <h4>Galeria das Cores</h4>
+                <p class="escenario-desc">Un rincón creativo donde el arte se respira y la música nace de forma libre.
+                  Aquí las jam sessions se convierten en puentes entre culturas, estilos y emociones.</p>
+              </div>
+
+              <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+              <div class="escenario" title="Escenario Layback">
+                <picture title="Imagen del escenario Layback">
+                  <source srcset="img/escenarios/layback.webp" type="image/webp">
+                  <source srcset="img/escenarios/layback.jpg" type="image/jpg">
+                  <img src="img/escenarios/layback.jpg" alt="Escenario Layback" title="Escenario Layback"
+                    loading="lazy">
+                </picture>
+                <h4>Layback</h4>
+                <p class="escenario-desc">Espíritu surf, noches cálidas y melodías improvisadas. Layback es el punto de
+                  encuentro para quienes disfrutan la música en su forma más espontánea y vibrante.
+                </p>
+              </div>
+
+              <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+              <div class="escenario" title="Escenario Taipa Brasil">
+                <picture title="Imagen del escenario Taipa Brasil">
+                  <source srcset="img/escenarios/taipabrasil.webp" type="image/webp">
+                  <source srcset="img/escenarios/taipabrasil.jpg" type="image/jpg">
+                  <img src="img/escenarios/taipa-brasil.jpg" alt="Escenario Taipa Brasil" title="Escenario Taipa Brasil"
+                    loading="lazy">
+                </picture>
+                <h4>Taipa Brasil</h4>
+                <p class="escenario-desc">Sabores, acordes y calidez. Este espacio combina gastronomía y cultura en un
+                  entorno íntimo, perfecto para jams cargadas de identidad y cercanía.</p>
+              </div>
+
+              <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+              <div class="escenario" title="Escenario Pipa Beach Club">
+                <picture title="Imagen del escenario Pipa Beach Club">
+                  <source srcset="img/escenarios/beach.webp" type="image/webp">
+                  <source srcset="img/escenarios/beach.jpg" type="image/jpg">
+                  <img src="img/escenarios/pipa-beach.jpg" alt="Escenario Pipa Beach Club"
+                    title="Escenario Pipa Beach Club" loading="lazy">
+                </picture>
+                <h4>Pipa Beach Club</h4>
+                <p class="escenario-desc">La despedida ideal: frente al mar, el domingo cierra con una jam session
+                  abierta, donde la improvisación se vuelve celebración y la música se queda flotando en el aire.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> <!-- Escenarios fin -->
+
+    <!-- Sección Talleres -->
+    <section class="talleres" title="Sección de talleres del festival">
+      <div class="container">
+        <h2 title="Título de la sección de talleres">Talleres y Actividades</h2>
+
+        <div class="talleres-grid">
+          <!-- Taller 1 Oficina Ilha de Música -->
+          <div class="taller" title="Oficina Ilha de Música">
+            <h3>Ilha de Música – Primeiros Sons</h3>
+            <p>“Isla de Música – Primeros Sonidos”</p>
+            <p>Un espacio lúdico para que los más pequeños y principiantes descubran la música a través del juego.
+              Ritmos, risas y primeras notas en un entorno creativo y acogedor.</p>
+          </div>
+
+          <!-- Taller 2 Oficina socioambiental Tamar-->
+          <div class="taller" title="Oficina socioambiental Tamar">
+            <h3>Instrumentos Reciclados</h3>
+            <p>“Charla con conciencia ecológica y ritmo creativo”</p>
+            <p>Música y medio ambiente se dan la mano en esta charla interactiva. Aprende a crear instrumentos con
+              materiales reciclados y descubre el trabajo de conservación de la Fundación Tamar.</p>
+          </div>
+
+          <!-- Taller 3 Workshop de batería-->
+          <div class="taller" title="Workshop de batería">
+            <h3>Workshop de <br>Batería</h3>
+            <p>“Taller de Percusión”</p>
+            <p>Siente el ritmo en una clase abierta dirigida por percusionistas del festival. Técnicas, improvisación y
+              mucha energía para todas las edades, sin necesidad de experiencia previa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer derechos y enlaces para redes sociales -->
+  <footer>
+    <div class="footer-container">
+      <small>Síguenos en redes sociales:</small>
+      <div class="social-links">
+        <!-- enlaces externos con target=blank rel=noreferrer y titlle -->
+        <a href="https://www.instagram.com/festbossajazz/" target="_blank" rel="noreferrer"
+          title="Visitar Instagram del Fest Bossa & Jazz">
+          <img src="img/logo/instagram.png" alt="Instagram">
+        </a>
+
+        <!-- enlaces externos con target=blank rel=noreferrer y titlle -->
+        <a href="https://www.facebook.com/FestBossaeJazz/" target="_blank" rel="noreferrer"
+          title="Visitar Facebook del Fest Bossa & Jazz">
+          <img src="img/logo/facebook.png" alt="Facebook">
+        </a>
+
+        <!-- enlaces externos con target=blank rel=noreferrer y titlle -->
+        <a href="https://www.youtube.com/@FestBossaJazz" target="_blank" rel="noreferrer"
+          title="Visitar canal de YouTube del Fest Bossa & Jazz">
+          <img src="img/logo/youtube.png" alt="YouTube">
+        </a>
+
+        <!-- enlaces externos con target=blank rel=noreferrer y titlle -->
+        <a href="https://open.spotify.com/user/31sxgxo5gsuloizldkv2wtarhyc4" target="_blank" rel="noreferrer"
+          title="Escuchar en Spotify">
+          <img src="img/logo/spotify.png" alt="Spotify">
+        </a>
+      </div>
+      <p>&copy; 2025 Fest Bossa & Jazz. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
+<!-- ¿Fin?... -->

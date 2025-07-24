@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Define los caracteres en la página -->
+  <meta charset="utf-8">
+
+  <!-- Garantizar la compatibilidad con versiones antiguas de Internet Explorer -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Título que aparece en la pestaña del navegador y que ayuda al SEO -->
+  <title>El Festival - Fest Bossa & Jazz</title>
+
+  <!-- Icono de la pestaña -->
+  <link rel="icon" type="image/png" href="img/logo/logofbj.png">
+
+  <!-- Adaptada a dispositivos móviles (responsive) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Descripción de la página para los motores de búsqueda-->
+  <meta name="description"
+    content="Descubre la historia del Fest Bossa & Jazz, el festival que une música, cultura y naturaleza en Brasil.">
+
+  <!-- Carga de las fuentes: conecta con Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- Recursos de fonts.gstatic.com se usen cruzando dominios -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fuente utilizada -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Quicksand:wght@500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Enlaza el archivo CSS de esta sección -->
+  <link rel="stylesheet" href="css/sobre.css" media="screen">
+
+  <!-- Enlaza el JavaScript correspondiente, usando "defer" para que se cargue al final -->
+  <script src="js/sobre.js" defer></script>
+</head>
+
+<!--Inicio del menu hamburguesa y logo-->
+
+<body>
+  <header>
+    <nav class="main-nav">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html" title="Ir al inicio del sitio Web">
+          <img src="img/logo/logofbj.png" alt="logoFBJ" height="58">
+        </a>
+      </div>
+
+      <!-- Menú visible en escritorio -->
+      <ul class="nav-primary">
+        <li><a href="index.html" class="active" title="Ir al inicio del sitio web">Inicio</a></li>
+        <li><a href="pipa.html" title="Ver información de la edición Pipa 2025">Edición Pipa</a></li>
+        <li><a href="sobre.html" title="Leer sobre la historia del festival">El Festival</a></li>
+      </ul>
+
+      <!-- Botón del menu -->
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Menú hamburguesa (todos los enlaces en orden para móvil) -->
+      <ul class="nav-secondary" id="navMenu">
+        <!-- Enlaces solo para móvil -->
+        <li class="mobile-only"><a href="index.html">Inicio</a></li>
+        <li class="mobile-only"><a href="pipa.html">Edición Pipa</a></li>
+        <li class="mobile-only"><a href="sobre.html">El Festival</a></li>
+
+        <!-- Enlaces visibles siempre -->
+        <li><a href="app.html">App Oficial</a></li>
+        <li><a href="colaboradores.html">Colaboradores</a></li>
+        <li><a href="mapa.html">Cómo Llegar</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- Seccion sobre el Festival -->
+  <main>
+    <section class="sobre-festival">
+      <div class="container">
+        <h1>Nuestra Historia</h1>
+        <p>La primera edición del Festival de Bossa & Jazz se celebró en 2010 en Natal, RN, y su continuo crecimiento
+          lo ha convertido en uno de los eventos más importantes del calendario cultural anual de Rio Grande do Norte.
+          Trascendiendo las fronteras de la ciudad de Natal, a partir de 2011, el Festival también se celebró en la
+          paradisíaca Praia da Pipa. Con el objetivo de ampliar su público y llegar a otras ciudades con atractivo
+          turístico en RN, en 2015, el Festival de Bossa & Jazz se convirtió en un circuito que llegó a São Miguel do
+          Gostoso y, al año siguiente, a Mossoró.
+
+          Con acceso completamente gratuito y siempre fiel a la propuesta de promover el intercambio entre figuras
+          consagradas y nuevos exponentes de la música, el principal objetivo del Fest Bossa & Jazz es promover y
+          fortalecer el trabajo de artistas de música instrumental, bossa nova, jazz y blues, además de asumir la
+          responsabilidad social de extender sus acciones más allá del escenario. Durante el día, se ofrecen
+          conferencias, talleres socioambientales para niños y jóvenes estudiantes de la red pública de educación, así
+          como talleres para músicos. Con todo esto, se incluye a RN en el circuito de los grandes festivales de Brasil.
+        </p>
+      </div>
+    </section>
+
+    <!-- Seccion Patrimonio Cultural -->
+    <section class="ley-festival">
+      <div class="container">
+        <h2>Patrimonio Cultural de RN</h2>
+        <blockquote>
+          <p><strong>"El Fest Bossa & Jazz ha sido reconocido oficialmente como PatrimoniomCultural, Turistico e
+              Inmaterial del Estado de Rio Grande do Norte a traves de LEY Nª 11.706"</strong></p>
+        </blockquote>
+        <p>Este reconocimiento fortalece aun mas el compromiso del festival con la cultura, la identidad local y la
+          sostenibilidad. Es un respaldo istiticional que pone en valor su legado artistico, educativo y social. </p>
+
+        <!-- video teaser y img stret band -->
+        <div class="video-preview">
+          <video controls preload="none" poster="img/backgrounds/streetband.webp">
+            <!-- poster, img antes de iniciar el video -->
+            <source src="video/teaser.webm" type="video/webm">
+            <source src="video/teaser.mp4" type="video/mp4"> <!-- formatos en mp4 y webm -->
+            Tu navegador no soporta la etiqueta de video.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Biografia de la Creadora y Organizadora del Festival -->
+    <section class="creadora">
+      <div class="container">
+        <h2>Creadora y Organizadora del Festival</h2>
+        <div class="perfil">
+          <!-- img dentro de picture, formatos webp y jpg con alt, title y lazy  -->
+          <picture>
+            <source srcset="img/backgrounds/creadora.webp" type="image/webp">
+            <source srcset="img/backgrounds/creadora.jpg" type="image/jpg">
+            <img src="img/backgrounds/creadora.webp" alt="Juçara Figueiredo" loading="lazy">
+          </picture>
+          <div class="bio">
+            <p><strong>Juçara Figueiredo</strong> es una ciudadana del mundo. Nacida en Franca (SP), ha vivido en
+              diversos lugares, viajando por diversos países hasta elegir Praia da Pipa como su hogar. Al frente de
+              <strong>Juçara Figueiredo Producciones</strong>, durante los últimos 21 años ha realizado diversas giras
+              de teatro y espectáculos por el noreste y el norte del país, creando y produciendo uno de los principales
+              eventos culturales de Rio Grande do Norte.
+            </p>
+            <p>Fue Juçara quien le presentó a Pipa el potencial transformador de la música, conectando personas, creando
+              vínculos y fortaleciendo la escena cultural local. Con carisma y sensibilidad, forjó sólidas amistades y
+              colaboraciones que marcaron su carrera. </p>
+            <!-- enlaces externos con target=blank rel=noreferrer y titlle -->
+            <p> Síguela en <a href="https://www.instagram.com/jucara.figueiredo/" target="_blank" rel="noreferrer"
+                title="Visita su perfil en Instagram">@juçara.figueiredo</a> para conocer más sobre su trayectoria y
+              proyectos culturales</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer derechos y enlaces para redes sociales -->
+  <footer>
+    <div class="footer-container">
+      <small>Síguenos en redes sociales:</small>
+      <div class="social-links">
+        <!-- enlaces externos con target=blank rel=noreferrer y titlle -->
+        <a href="https://www.instagram.com/festbossajazz/" target="_blank" rel="noreferrer"
+          title="Visitar Instagram del Fest Bossa & Jazz">
+          <img src="img/logo/instagram.png" alt="Instagram">
+        </a>
+
+        <!-- enlaces externos con target=blank rel=noreferrer y titlle -->
+        <a href="https://www.facebook.com/FestBossaeJazz/" target="_blank" rel="noreferrer"
+          title="Visitar Facebook del Fest Bossa & Jazz">
+          <img src="img/logo/facebook.png" alt="Facebook">
+        </a>
+
+        <!-- enlaces externos con target=blank rel=noreferrer y titlle -->
+        <a href="https://www.youtube.com/@FestBossaJazz" target="_blank" rel="noreferrer"
+          title="Visitar canal de YouTube del Fest Bossa & Jazz">
+          <img src="img/logo/youtube.png" alt="YouTube">
+        </a>
+
+        <!-- enlaces externos con target=blank rel=noreferrer y titlle -->
+        <a href="https://open.spotify.com/user/31sxgxo5gsuloizldkv2wtarhyc4" target="_blank" rel="noreferrer"
+          title="Escuchar en Spotify">
+          <img src="img/logo/spotify.png" alt="Spotify">
+        </a>
+      </div>
+      <p>&copy; 2025 Fest Bossa & Jazz. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
+<!-- ¿Fin?... -->
